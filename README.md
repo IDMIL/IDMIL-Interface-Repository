@@ -2,7 +2,7 @@
 This repository contains every control system/interface developed at IDMIL, 
 organized by interface name and interface version number
 
-![IDMIL Interface Repository Structure](<Github File Structure.jpeg>)
+![IDMIL Interface Repository File Structure](<REPOSITORY-DOCS/Github File Structure.jpeg>)
 
 **About this repository**
 1)	This repository is oriented around individual interfaces
