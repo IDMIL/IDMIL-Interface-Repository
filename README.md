@@ -22,3 +22,5 @@ organized by interface name and interface version number
 > > 
 > b)	Modules can be duplicated or linked across multiple interface versions if a change has only occurred within one component of the interface
 > > i)	Example: A software update to the T-Stick constitutes a new version of the interface. A new software documentation module should be created reflecting the update. If the hardware has not changed
+
+![Detailed Desription of the IDMIL Interface Repository Structure](idmil_repo_structure_table.png)
