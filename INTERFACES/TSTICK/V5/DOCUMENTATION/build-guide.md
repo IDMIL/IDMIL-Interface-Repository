@@ -1,0 +1,254 @@
+# Building a T-Stick 5GW
+
+**warning**: This guide is still under constructions. Links to files/products may be broken. If you find a broken link please open an issue on github.
+
+
+## 5GW-Trill
+
+**Bill of Materials**
+| Qty    | Description                                                                                 |
+|--------|---------------------------------------------------------------------------------------------|
+| 01     | [Trill Craft Board](https://shop.bela.io/collections/trill/products/trill-craft)            |
+| 01     | [EnchantiS3 Board](https://github.com/IDMIL/EnchantiS3)                                     |
+| 01     | Trill Extension Board                                                                       |
+| 01     | Flex PCB touch sensor                                                                       |
+| 01     | 30cm FSR 408                                                                                |
+| 01     | [6mm Button](https://www.adafruit.com/product/4184)                                         |
+| 01     | Li-Po/Li-ion Battery min 1000mA                                                             |
+| 01     | ABS/PVC Tube                                                                                |
+| 02     | Sparkfun Qwiic Cable or equivalent (at least 10cm) (longer T-Sticks need additional cables) |
+| 02     | JST-SH 2 pin cable                                                                         |
+| \~35cm | Heat shrink tube                                                                            |
+| 01     | end-cup with microcontroller base                                                           |
+| 01     | end-cup with for the ON-OFF switch                                                          |
+| 01     | 3D printed bases, one of each file, and 4 regular poles                                     |
+| 11     | M3 Mounting Screws                                                                          |
+| 01     | foam sheet                                                                                  |
+
+ ## Instructions
+
+### Prepare the 3D printed components
+
+Print the following [files from the T-Stick repository](https://github.com/aburt2/T-Stick/tree/5gw-main/3D_printing/T-Stick%205GW).
+
+ - x1 esp32-endcap
+- x1 esp32-capcloser
+- x1 touch-board-bed
+ - x2 touch-board-door
+- x1 blank-endcap
+
+**NOTE**: If you are using an 18650 battery you will need to print ``liion-endcap`` and ``liion-capcloser`` instead of the ``blank-endcap``.
+
+![Overview of 3D printed components](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_overview_components.png)
+#### Adding inserts
+
+Use a soldering iron or other heat source to add M2 inserts to the front of the ESP32 bed piece (x2).
+![M2 inserts in the front of the ESP32 cap](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_m2_inserts.png)
+
+Add M3 inserts to the holes inside the ESP32 bed (x2). These will be used to screw in the board to the component.
+![M3 inserts for ESP32 board](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_M3_inserts_ESP32.png)
+
+Add M2 inserts to the holes on the side of the touch board beds (x4). These will be used to screw in the touch board doors.
+
+![M2 inserts for the touch board bed](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_m2_inserts_touch.png)
+### Prepare the ABS/PVC Pipe
+
+Cut the ABS/PVC pipe two pieces. One piece should be about ~8inch/20cm and other a short piece about ~1.2inch/3cm. Use super glue or other alternative methods to glue the touch board bed to both pieces of the ABS/PVC pipe. Make sure to glue the short piece to the end closest to the M3 inserts.
+![touch board bed glued to pipe](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_touch_board_glued.png)
+
+
+**TIP:**We recommend using a drop saw/mitre saw to get a clean cut
+
+Add M3 inserts to the last two holes closest to the short PVC pipe on the bottom of the touch board beds (x2). These will be used to secure the Trill Craft board.
+
+
+![M3 inserts for touch board](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_M3_inserts_touch.png)
+
+ **TIP:** Add the M3 inserts from the top (from the flat part of the piece). This will ensure that you don't get fillament in the way when attempting to screw in the boards.
+
+#### Setup the touch board
+
+Solder the Trill Craft board on the Trill Craft Extension Board.
+
+![touch board soldered](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_soldered_touch_board.png)
+Use two M3 screws to screw the Trill Craft extension board to the touch board bed. Connect the touch sensor to the FFC connectors on the Trill Craft board. Peel the cover from the tape and tape the touch sensor against the pipe as shown below.
+
+![touch sensor mounted](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_touch_sensor_mounted.png)
+#### Mount the FSR
+
+Cut the 2-pin JST cable to about 10cm as shown in the image below.
+
+![cut jst cable, next to fsr](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_fsr_jst_cablefsr.png)
+
+Solder the two ends of the JST cable to the two terminals of the FSR.
+
+** WARNING**: Take care with soldering the FSR. Excessive heat will damage the FSR pins.
+
+![soldered FSR connection](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_fsr_soldered.png)
+**TIP:** The FSR pins are very delicate. Put some heat shrink tube to reinforce the end of the fsr so it doesn’t break. If it breaks, it’s not repairable.
+
+**TIP:** It is recommended to put a bit of solder on both the FSR terminals and the ends of the FSR cables. This allows you to quickly solder the FSR, without damaging the terminals due to excessive heat. Use heat shrink to prevent shorts.
+
+Attach the FSR to the outside of the ABS/PVC pipe on the opposite end of the touch sensor, cutting the end if it's too long. Cut the foam sheets into rectangles and tape it over the FSR.
+
+| FSR mounted, before adding foam sheet                             | FSR mounted with foam sheet                                          |
+|-------------------------------------------------------------------|----------------------------------------------------------------------|
+|     ![fsr mounted uncovered](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_fsr_mounted_uncover.png)  |     ![fsr mounted covered by foam sheet](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_fsr_mounted_covered.png)   |
+
+
+#### Apply Heat Shrink
+
+Cut the Heat shrink leaving a little heat shrink at both ends of the pipe. Shrink the heat shrink over the pipe, making sure to not overtighten the heat shrink over the FSR side of the pipe. Once the heat shrink has been applied. Cut a hole in the heat shrink where the touch board is.
+
+**WARNING**: Be careful to not cut the touch sensor
+
+![heat shrink cut open](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_heatshrink_cutopen.png)
+### Prepare the EnchantiS3 Board
+
+Use two M3 screws to secure the EnchantiS3 board to the ESP32 endcap. Glue the button in the button slot on the ESP32 bed piece. Cut another 2-Pin JST cable (like the one used for the FSR). Solder the two ends of the JST cable vertically to the button pins. 
+
+![EnchantiS3 assembled button](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_assembled_button.png)
+
+Connect the JST cable from the button to the BTN header on the EnchantiS3 board.
+
+![EnchantiS3 Board on the ESP32 bed](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_esp32_bed.png)
+ ### Final Assembly
+
+Glue both endcaps to the ends of the pipe. Connect the JST cable from the FSR to the FSR header on the EnchantiS3 board.
+
+**INFO**: It is really important that there is a strong adhesion when gluing the components together. Use glue designed for the plastic pipe you are using.
+
+![Finished T-Stick](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_tstick_withendcap.png)
+Use M2 screws to add the touch door beds to the T-Stick.
+
+![Touch door connected to T-Stick](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/trill_touch_door.png)
+
+Congratulations you've built your T-Stick!
+
+## 5GW-Enchanti
+
+   **NOTE**: This guide is for building a Soprano T-Stick 5GW.
+
+**Bill of Materials**
+
+| Qty    | Description                                                                                 |
+|--------|---------------------------------------------------------------------------------------------|
+| 01     | [EnchantiTouch Board](https://github.com/IDMIL/EnchantiTouch)                               |
+| 01     | [EnchantiS3 Board](https://github.com/IDMIL/EnchantiS3)                                     |
+| 01     | Flex PCB touch sensor                                                                       |
+| 01     | 60cm FSR 408                                                                                |
+| 01     | [6mm Button](https://www.adafruit.com/product/4184)                                         |
+| 01     | Li-Po/Li-ion Battery min 1000mA                                                             |
+| 01     | ABS/PVC Tube                                                                                |
+| 02     | Sparkfun Qwiic Cable or equivalent (at least 10cm) (longer T-Sticks need additional cables) |
+| 02     | JST-SH 2 pin cable                                                                          |
+| \~65cm | Heat shrink tube (80mm diameter)                                                            |
+| 01     | end-cup with microcontroller base                                                           |
+| 01     | end-cup with for the ON-OFF switch                                                          |
+| 01     | 3D printed bases, one of each file, and 4 regular poles                                     |
+| 11     | M3 Mounting Screws                                                                          |
+| 04     | M3 Inserts (6mm)                                                                            |
+| 06     | M2 Inserts (6mm)                                                                            |
+| 01     | foam sheet                                                                                  |
+| 01     | Plastic glue                                                                                |
+| 01     | 18650 battery holder (if using 18650 battery)                                               |
+| 01     | 2 pin JST-PH cable (if using 18650 battery)                                                 |
+
+## Instructions
+
+### Prepare the 3D printed components
+
+Print the following [files from the T-Stick repository](https://github.com/aburt2/T-Stick/tree/5gw-main/3D_printing/T-Stick%205GW).
+
+ - x1 esp32-endcap
+ - x1 esp32-capcloser
+ - x1 touch-board-bed
+ - x2 touch-board-door
+ - x1 blank-endcap
+
+**NOTE**: If you are using an 18650 battery you will need to print ``liion-endcap`` and ``liion-capcloser`` instead of the ``blank-endcap``.
+
+![Overview of 3D printed components](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/components.jpg)
+#### Adding inserts
+
+Use a soldering iron or other heat source to add M2 inserts to the front of the ESP32 bed piece (x2).
+
+![M2 inserts in the front of the ESP32 capalt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/m2_insert_cap.jpg)
+Add M3 inserts to the holes inside the ESP32 bed (x2). These will be used to screw in the board to the component.
+
+![M3 inserts for ESP32 boardalt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/m3_inset_cap.jpg)
+Add M2 inserts to the holes on the side of the touch board beds (x4). These will be used to screw in the touch board doors.
+
+![M2 inserts for the touch board bedalt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/m2_inserts_touch.jpg)
+Add M3 inserts to the 3rd and 5th hole on the bottom of the touch board beds (x2). These will be used to secure the Enchanti touch board.
+
+**TIP**: Add the M3 inserts from the top (from the flat part of the piece). This will ensure that you don't get fillament in the way when attempting to screw in the boards.
+
+### Prepare the ABS/PVC Pipe
+
+Cut the ABS/PVC pipe into two pieces. Each with a length of about ~10inch/25cm. Use super glue or other alternative methods to glue the touch board bed to both pieces of the ABS/PVC pipe.
+
+
+![Touch board bed glued to pipealt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/pipe-glued.jpg)
+**TIP**: We recommend using a drop saw/mitre saw to get a clean cut
+
+#### Setup the touch board
+
+Flash the Enchanti Touch board using the firmware found [here](https://github.com/IDMIL/EnchantiTouch/releases/). You can find instructions for how to flash the PSoC 4100S Max on [Infineon's website](https://www.infineon.com/dgdl/Infineon-ModusToolbox_3.2_b_VS_Code_User_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c8d2fe47b018e0ea954a278fb)
+
+Use two M3 screws to screw the Enchanti Touch board to the touch board bed. Connect the touch sensor to the FFC connectors on the Enchanti Touch board. Peel the cover from the tape and tape the touch sensor against the pipe as shown below.
+
+![touch sensor mounted](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/touch_sensor_mounted.jpg)
+ #### Mount the FSR
+
+Cut the 2-pin JST cable to about 10cm as shown in the image below.
+
+![cut jst cable, next to fsralt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/fsr-unassembled.jpg)
+Solder the two ends of the JST cable to the two terminals of the FSR.
+
+**WARNING**: Take care with soldering the FSR. Excessive heat will damage the FSR pins.
+
+![oldered FSR connection](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/fsr-soldered.jpg)
+**TIP**:The FSR pins are very delicate. Put some heat shrink tube to reinforce the end of the fsr so it doesn’t break. If it breaks, it’s not repairable.
+
+**TIP**: It is recommended to put a bit of solder on both the FSR terminals and the ends of the FSR cables. This allows you to quickly solder the FSR, without damaging the terminals due to excessive heat. Use heat shrink to prevent shorts.
+
+Attach the FSR to the outside of the ABS/PVC pipe on the opposite end of the touch sensor, cutting the end if it's too long. Cut the foam sheets into rectangles and tape it over the FSR.
+
+| FSR mounted, before adding foam sheet                             | FSR mounted with foam sheet                                          |
+|-------------------------------------------------------------------|----------------------------------------------------------------------|
+|  ![fsr mounted uncoveredalt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/fsr_mounted_uncovered.jpg)    |  ![fsr mounted covered by foam sheetalt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/fsr-mounted.jpg)    |
+
+
+#### Apply Heat Shrink
+
+Cut the Heat shrink leaving a little heat shrink at both ends of the pipe. Shrink the heat shrink over the pipe, making sure to not overtighten the heat shrink over the FSR side of the pipe. Once the heat shrink has been applied. Cut a hole in the heat shrink where the touch board is.
+
+**WARNING**
+Be careful to not cut the touch sensor
+
+![heat shrink cut openalt text](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/heat-shrink-cut.jpg)
+### Prepare the EnchantiS3 Board
+
+Use two M3 screws to secure the EnchantiS3 board to the ESP32 endcap. Glue the button in the button slot on the ESP32 bed piece. Cut another 2-Pin JST cable (like the one used for the FSR). Solder the two ends of the JST cable vertically to the button pins. Connect the JST cable from the button to the BTN header on the EnchantiS3 board.
+
+![EnchantiS3 Board on the ESP32 bed](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/board-in-cap.jpg)
+
+### Final Assembly
+
+Glue both endcaps to the ends of the pipe. Connect the JST cable from the FSR to the FSR header on the EnchantiS3 board.
+
+**INFO**: It is really important that there is a strong adhesion when gluing the components together. Use glue designed for the plastic pipe you are using.
+
+![Endcap attached to the T-Stick](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/cap-glued.jpg)
+Use M2 screws add the touch door beds to the T-Stick.
+
+![Touch door connected to T-Stick](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/touch-door-closed.jpg)
+
+## Next Steps
+Congratulations you have built a T-Stick 5GW! Instructions to upload (flash) the T-Stick firmware and configuration files can be found [here](./flashing-guide.md).
+
+Read and follow __ALL__ the instructions before uploading the firmware to the board. There are some steps to prepare your machine and the ESP32 before flash it for the first time.
+
+## More info:
+Version 0.0: Created by: Albert-Ngabo Niyonsenga - aniyonsenga@gmail.com
