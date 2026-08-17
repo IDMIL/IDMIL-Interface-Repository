@@ -18,7 +18,7 @@
  4. Power on your T-Stick and wait until the boot sequence is complete. If your T-Stick does not have a Power switch press the button once and wait for the T-Stick to turn on.
  5. Connect to the T-Stick_XXX wifi network where XXX is the ID of the T-Stick. ie: TStick_001. By default the password is mappings.
  6. Open your browser and go to <http://TStick_XXX.local/> or <http://192.168.4.1>, where XXX is the ID of the T-Stick module. 
-     ![T-Stick Setup Page](./Images/network-page.png)
+     ![T-Stick Setup Page](../MEDIA-FILES/BUILD-GUIDE-IMAGES/Images/network-page.png).
  7. In the __Network__ section write the network name and password optained in Step 2 in the __SSID__ and __SSID Password__ fields.
  8. In the __OSC send settings__ put in your computer's IP address optained in Step 3 in the __Primary IP__ field.
  9. Click the green __Save__ button. You will be directed to a page saying that the information was saved successfully.
