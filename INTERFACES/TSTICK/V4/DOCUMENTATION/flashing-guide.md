@@ -50,14 +50,12 @@ You can use Visual Studio Code and the PlatformIO extension in order to flash fi
 1. Download [Visual Studio Code](https://code.visualstudio.com/download).
 2. Follow the [installation guide](https://docs.platformio.org/en/latest/integration/ide/vscode.html#installation) on PlatformIO's website to setup PlatformIO extension in VS Code
 
-!!! tip
-
-    If you are not familiar with PlatformIO or VS Code it is recommended to read a quick start guide for both platforms before continuing this guide.
+**TIP**: If you are not familiar with PlatformIO or VS Code it is recommended to read a quick start guide for both platforms before continuing this guide.
 
 ### Build the Firmware
 3. Download and unzip the latest firmware from the [T-Stick reposity](https://github.com/IDMIL/T-Stick/)
 4. In Visual Studio, under the File menu select open folder.
-  ![open folder button in VS code code](./Images/vscode-open-folder.png)
+![open folder button in VS code code](../MEDIA-FILES/GUIDE-IMAGES/Images/vscode-open-folder.png)
 5. Navigate to where you downloaded the T-Stick repository and select the firmware folder.
 6. On the bottom bar select the correct environment depending on your T-Stick version (ie: `tinypico` or `lolin_d32_pro`)
 7. In the `main.cpp` file ensure the `TSTICK_SIZE` is the correct value for your T-Stick.
@@ -71,8 +69,8 @@ You can use Visual Studio Code and the PlatformIO extension in order to flash fi
 
 13. Select `Build Filesystem Image`.
 
-  ![PlatformIO project Tasks](./Images/vscode-project-tasks.png)
-
+ 
+![PlatformIO project Tasks](../MEDIA-FILES/GUIDE-IMAGES/Images/vscode-project-tasks.png)
 ### Upload the Firmware and Filesystem Image
 
 !!! note
