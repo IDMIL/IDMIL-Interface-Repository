@@ -4,6 +4,8 @@ organized by interface name and interface version number
 
 ![IDMIL Interface Repository File Structure](<REPOSITORY-DOCS/Github File Structure.jpeg>)
 
+**Note**: A complete list of the interfaces documented within this repository can be found here: [Interface List](INTERFACES/README_INTERFACES.md)
+
 **About this repository**
 1)	This repository is oriented around individual interfaces
 > a)	An interface is any control system which a user interacts with directly
