@@ -4,7 +4,7 @@ The Pedal Motor Controller (abbreviated PMC) is a device that mechanically turns
 If the user attaches their phone to the guitar headstock, then movements of the guitar will have a direct correlation to sonic output. This is especially relevant for gestural research, as it provides a platform for investigating the relationship between performance gestures and musical style.
 
 ### PedalMotorController (PMC) Repository Folder
-[PMC Documentation](V1/DOCUMENTATION/README.md)|
+[PMC Documentation](V1/DOCUMENTATION/README.md)
 |Documentaion| Completeness|
 |---|---|
 | Build Instructions | Complete | 
@@ -20,6 +20,8 @@ If the user attaches their phone to the guitar headstock, then movements of the 
 |Menu| Complete|
 |Motor Info| Complete|
 |Serial Sensor Gyro| Complete
+
+[PMC Hardware](V1/HARDWARE/HARDWARE-README.md)
 
 [PMC Media Files](V1/MEDIA-FILES/README.md)
 
