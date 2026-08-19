@@ -10,7 +10,7 @@
 - [Mathias Bredholt](https://www.idmil.org/people/mathias-bredholt/)
 - [Mathias Kirkegaard](https://www.idmil.org/people/mathias-kirkegaard/)
 
-**TorqueTuner V2 (2026)**: [REVIVING THE ORIGINAL TORQUETUNERt](https://www.idmil.org/project/reviving-the-original-torquetuner/)
+**TorqueTuner V2 (2026)**: [REVIVING THE ORIGINAL TORQUETUNER](https://www.idmil.org/project/reviving-the-original-torquetuner/)
 
 The first iteration of the TorqueTuner, a rotary haptic force feedback module, was designed in 2019 by Mathias Kirkegaard and Christian Frisson. As discussed in Albert-Ngabo Niyonsenga’s project, Sustainable Haptic Development, the servo used to control the motor haptics, the Mechaduino, has been out of production since 2020. Since then, the TorqueTuner has been ported to the Moteus platform (2022) and more recently to the MaTouch SmartKnob (2026, SHIVERS).
 
@@ -20,5 +20,5 @@ As a part of this project, the Mechaduino circuit design was ported from EAGLE t
 
 This project is still in development, though the current design (v1.2) is stable and was demonstrated at Eurohaptics 2026 alongside the other two TorqueTuners.
 
-IDMIL Participants:
+**IDMIL Participants:**
 - [Danilo Pesevic](https://www.idmil.org/people/danilo-pesevic/)
